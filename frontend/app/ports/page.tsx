@@ -574,7 +574,7 @@ function PortStatusInner() {
                 { key: 'disabled', label: `🟡 Disabled (${ports.filter(p => p.status === 'disabled' || p.status === 'err-disabled').length})`, color: '#f59e0b' },
               ].map(f => (
                 <button key={f.key} onClick={() => setStatusFilter(f.key as any)}
-                  style={{ padding: '6px 12px', borderRadius: '20px', border: 'none', cursor: 'pointer', fontSize: '11px', fontWeight: 600, whiteSpace: 'nowrap',
+                  style={{ padding: '6px 12px', borderRadius: '20px', cursor: 'pointer', fontSize: '11px', fontWeight: 600, whiteSpace: 'nowrap',
                     background: statusFilter === f.key ? `rgba(${f.key === 'connected' ? '16,185,129' : f.key === 'notconnect' ? '248,113,113' : f.key === 'disabled' ? '245,158,11' : '100,116,139'},0.25)` : 'rgba(30,41,59,0.6)',
                     color: statusFilter === f.key ? f.color : '#64748b',
                     border: statusFilter === f.key ? `1px solid ${f.color}55` : '1px solid transparent'
