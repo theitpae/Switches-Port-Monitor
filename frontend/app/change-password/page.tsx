@@ -69,7 +69,7 @@ export default function ChangePasswordPage() {
               style={{ width: '100%', padding: '13px', borderRadius: '10px', border: 'none', background: '#10b981', color: 'white', fontWeight: 700, fontSize: '15px', cursor: 'pointer', marginTop: '4px' }}>
               {loading ? 'กำลังบันทึก...' : 'บันทึกรหัสผ่านใหม่'}
             </button>
-            <button type="button" onClick={logout}
+            <button type="button" onClick={() => logout()}
               style={{ width: '100%', padding: '10px', borderRadius: '10px', border: 'none', background: 'transparent', color: '#64748b', cursor: 'pointer', fontSize: '13px', marginTop: '8px' }}>
               ออกจากระบบ
             </button>
