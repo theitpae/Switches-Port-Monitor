@@ -6,11 +6,13 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://127.0.0.1:8000/api/:path*',
+        // เปลี่ยนปลายทางไปที่ Render ของคุณ
+        destination: 'https://switches-port-monitor.onrender.com/api/:path*',
       },
       {
         source: '/auth/:path*',
-        destination: 'http://127.0.0.1:8000/auth/:path*',
+        // เปลี่ยนปลายทางไปที่ Render ของคุณ
+        destination: 'https://switches-port-monitor.onrender.com/auth/:path*',
       },
     ]
   },
