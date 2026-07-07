@@ -128,7 +128,7 @@ function SwitchesTab() {
     setForm({ ip_address: sw.ip_address, hostname: sw.hostname, username: sw.username, password: '', site_id: sw.site_id || '', location_area: sw.location_area || '', model: sw.model || '', tags: sw.tags || [] });
   };
 
-  const allowedSites = isAdmin() ? sites : sites.filter(s => user?.assigned_sites?.some((as: any) => as.id === s.id));
+  const allowedSites = isAdmin() ? sites : sites.filter(s => (user as any)?.assigned_sites?.some((as: any) => as.id === s.id));
   const q = search.toLowerCase();
   const filteredSwitches = switches.filter(sw =>
     (!tagFilter || (sw.tags || []).includes(tagFilter)) &&
