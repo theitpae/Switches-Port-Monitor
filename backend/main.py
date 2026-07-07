@@ -68,6 +68,15 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ─── เพิ่มหน้าแรก (Root Path) แก้ปัญหา Not Found ──────────────────────────────────
+@app.get("/")
+def read_root():
+    return {
+        "message": "Welcome to Cisco Switch Monitoring API",
+        "docs_url": "/docs",
+        "health_check": "/health"
+    }
+
 # ─── Session Store (in-memory) ────────────────────────────────────────────────
 active_sessions: dict[str, dict] = {}
 
