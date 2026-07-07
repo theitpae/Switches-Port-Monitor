@@ -584,7 +584,7 @@ function PortStatusInner() {
               ))}
               {/* Chart toggle */}
               <button onClick={() => setShowChart(!showChart)}
-                style={{ padding: '6px 12px', borderRadius: '8px', border: 'none', cursor: 'pointer', fontSize: '12px', fontWeight: 600,
+                style={{ padding: '6px 12px', borderRadius: '8px', cursor: 'pointer', fontSize: '12px', fontWeight: 600,
                   background: showChart ? 'rgba(59,130,246,0.25)' : 'rgba(30,41,59,0.6)', color: showChart ? '#93c5fd' : '#64748b', border: showChart ? '1px solid rgba(59,130,246,0.4)' : '1px solid transparent' }}>
                 📈 Chart
               </button>
