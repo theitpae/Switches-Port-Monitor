@@ -281,7 +281,7 @@ function PortStatusInner() {
   });
 
   // Port utilization chart (SVG bar chart)
-  const PortChart = () => {
+  const SwitchSummaryChart = () => {
     const connected = ports.filter(p => p.status === 'connected' || p.status === 'up').length;
     const notconnect = ports.filter(p => p.status === 'notconnect' || p.status === 'down').length;
     const disabled = ports.filter(p => p.status === 'disabled' || p.status === 'err-disabled').length;
@@ -591,7 +591,7 @@ function PortStatusInner() {
             </div>
 
             {/* Port Utilization Chart */}
-            {showChart && ports.length > 0 && <PortChart />}
+            {showChart && ports.length > 0 && <SwitchSummaryChart />}
 
             {/* Result count */}
             {(portSearch || statusFilter !== 'all') && (
